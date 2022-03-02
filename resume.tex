@@ -1,0 +1,203 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage[lmargin=0.5in,rmargin=0.5in,tmargin=0.5in,]{geometry}
+\raggedright
+\raggedbottom
+
+\usepackage[x11names]{xcolor}
+\usepackage[pdftex,
+			colorlinks=true,
+			linkcolor=black,
+			urlcolor=Blue4,
+			citecolor=black,
+			allbordercolors={0.8 0.8 0.8}]{hyperref}
+
+% Format section headings
+\usepackage{titlesec}
+\titleformat{\section}{
+	\vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Tabular formatting
+\usepackage{enumitem}
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\EducationItem}[4]{
+	\item{\vspace{-1pt}
+		\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+			\textbf{#1} & {#2}\\
+			{#3} & {#4}
+		\end{tabular*}
+		\vspace{-5pt}
+	}
+}
+\newcommand{\EducationSubItem}[2]{
+	\item{\vspace{-3pt}
+		\begin{tabular*}{0.92\textwidth}{l@{\extracolsep{\fill}}r}
+			{\footnotesize #1} & {\footnotesize #2}
+		\end{tabular*}
+		\vspace{-5pt}
+	}
+}
+
+\newcommand{\ExperienceItem}[4]{
+	\item{\vspace{-1pt}
+		\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+			\textbf{#1} & {#2}\\
+			{#3} & {#4}
+		\end{tabular*}
+		\vspace{-5pt}
+	}
+}
+\newcommand{\ExperienceSubItem}[2]{
+	\item{\vspace{-3pt}
+		\begin{tabular*}{0.92\textwidth}{l@{\extracolsep{\fill}}r}
+			{\footnotesize #1} & {\footnotesize #2}
+		\end{tabular*}
+		\vspace{-5pt}
+	}
+}
+
+\newcommand{\SkillsItem}[2]{
+	\item{\vspace{-1pt}
+		\begin{tabular*}{0.97\textwidth}{l l}
+			{\textbf{#1}:} & {#2}
+		\end{tabular*}
+		\vspace{-5pt}
+	}
+}
+
+\newcommand{\AwardsItem}[2]{
+	\item{\vspace{-1pt}
+		\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+			{#1} & {#2}
+		\end{tabular*}
+		\vspace{-5pt}
+	}
+}
+
+\newcommand{\ReferencesItem}[4]{
+	\item{\vspace{-1pt}
+		\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+			\textbf{#1} & {#2}\\
+			{#3} & {#4}
+		\end{tabular*}
+		\vspace{-5pt}
+	}
+}
+
+
+\begin{document}
+
+%%%%%%%%%%
+% Header %
+%%%%%%%%%%
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+	{\Huge \textbf{Michael Zurel}} & \begin{tabular}{l}
+		Personal email: \href{mailto:mzurel@protonmail.com}{mzurel@protonmail.com}\\
+		Work email: \href{mailto:mzurel@phas.ubc.ca}{mzurel@phas.ubc.ca}\\
+		Website: \href{https://mzurel.github.io}{mzurel.github.io}
+		%\href{https://scholar.google.com/citations?user=qUA_szUAAAAJ&hl=en&oi=ao}{Google scholar}
+	\end{tabular}
+\end{tabular*}
+
+%%%%%%%%%%%%%
+% Education %
+%%%%%%%%%%%%%
+\section*{Education}
+
+\begin{itemize}[leftmargin=*]
+	\EducationItem{PhD (in progress)}{University of British Columbia}{Physics (Quantum information and computation)}{September, 2020 -- Present}
+	\begin{itemize}
+		\vspace{-4pt}
+		\EducationSubItem{Supervisor: Dr. Robert Raussendorf}{}
+		\EducationSubItem{Expected graduation: 2025}{}
+	\end{itemize}
+	
+	\EducationItem{MSc}{University of British Columbia}{Physics (Quantum information and computation)}{September, 2019 -- November, 2020}
+	\begin{itemize}
+		\vspace{-4pt}
+		\EducationSubItem{Supervisor: Dr. Robert Raussendorf}{}
+		\EducationSubItem{Thesis: \href{https://dx.doi.org/10.14288/1.0394790}{Hidden variable models and classical simulation algorithms for quantum computation with magic states on qubits}}{}
+	\end{itemize}
+	
+	\EducationItem{BSc}{University of British Columbia}{Combined honours in Physics and Mathematics}{September, 2014 -- May, 2019}
+	\begin{itemize}
+		\vspace{-4pt}
+		\EducationSubItem{Honours thesis: Contextuality and Simulating Quantum Computation with Magic States}{}
+	\end{itemize}
+	%\EducationItem{Memorial University}{St. John’s, Newfoundland}{Completed two physics courses during final year of high school}{2013-2014}
+	%\EducationItem{International Summer School for Young Physicists}{Waterloo, Ontario}{Two week summer program hosted by the Perimeter Institute for Theoretical Physics}{2014}
+	%\EducationItem{Gonzaga High School}{St. John’s, Newfoundland}{Graduated with First Class Honours, French Immersion Designation}{2012-2014}
+\end{itemize}
+
+%%%%%%%%%%%%%%
+% Experience %
+%%%%%%%%%%%%%%
+\section*{Experience}
+\begin{itemize}[leftmargin=*]
+	\ExperienceItem{Research assistant}{Vancouver, Canada}{Department of Physics, University of British Columbia}{September, 2018 -- Present}
+	\begin{itemize}
+		\vspace{-4pt}
+		\ExperienceSubItem{For list of publications see \href{https://scholar.google.com/citations?user=qUA_szUAAAAJ&hl=en&oi=ao}{Google Scholar}}{}
+	\end{itemize}
+	
+	\ExperienceItem{Teaching assistant}{Vancouver, Canada}{Department of Physics, University of British Columbia}{September, 2019 -- Present}
+	\begin{itemize}
+		\vspace{-4pt}
+		\ExperienceSubItem{Classes include: Introductory physics, Electricity \& magnetism, Quantum mechanics}{}
+	\end{itemize}
+	
+	\ExperienceItem{Research assistant}{St.~John's, Canada}{Department of Geography, Memorial University}{May, 2017 -- August, 2018}
+	\begin{itemize}
+		\vspace{-4pt}
+		\ExperienceSubItem{Data acquisition, database management, data analysis (primarily census and socio-economic data)}{}
+		\ExperienceSubItem{Creation of dynamic data visualizations}{}
+	\end{itemize}
+	%\ExperienceItem{Litter Collection Crew}{St. John's, Canada}{City of St. John’s}{May, 2015 -- August, 2015}
+	%\ExperienceItem{Volunteer hockey coach}{St. John's, Canada}{Avalon Minor Hockey Association}{September, 2007 -- April, 2014}
+	%\ExperienceItem{President of Junior Achievement company}{St. John's, Canada}{Junior Achievement}{2012 -- 2013}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%
+% Technical skills %
+%%%%%%%%%%%%%%%%%%%%
+\section*{Technical Skills}
+\begin{itemize}[leftmargin=*]
+	\SkillsItem{Programming languages}{Python, Julia, Matlab, Octave, R, SQL}
+	\SkillsItem{Technologies}{AWS, MariaDB, Linux, Latex}
+	\SkillsItem{Other skills}{Physics, mathematics, data analysis}
+\end{itemize}
+
+%%%%%%%%%%
+% Awards %
+%%%%%%%%%%
+\section*{Awards and Honours}
+\begin{itemize}[leftmargin=*]
+	\AwardsItem{Alexander Graham Bell Canada Graduate Scholarship (NSERC CGS-D)}{2021--2024}
+	\AwardsItem{UBC Four Year Doctoral Fellowship (4YF)}{2021 -- 2025}
+	\AwardsItem{President's Academic Excellence Initiative PhD Award}{2020 -- 2022}
+	\AwardsItem{UBC Faculty of Science PhD Tuition Award }{2020 -- 2022}
+	\AwardsItem{UBC Chancellor's Scholar Award}{2014}
+	\AwardsItem{The Duke of Edinburgh's International Award Gold Award Received}{2014}
+	\AwardsItem{CAP High School Physics Examination - $1^{st}$ Place in Newfoundland \& Labrador}{2014}
+	%\AwardsItem{Gonzaga High School Award of Excellence}{2012 -- 2014}
+	%\AwardsItem{AAA hockey provincial champion}{2012 -- 2014}
+	%\AwardsItem{Newfoundland provincial lacrosse team}{2011 -- 2013}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%
+% References %
+%%%%%%%%%%%%%%
+\section*{References}
+\begin{itemize}[leftmargin=*]
+	\ReferencesItem{Dr. Robert Raussendorf}{\href{mailto:raussen@phas.ubc.ca}{raussen@phas.ubc.ca}}{Professor, Department of Physics, University of British Columbia}{Vancouver, Canada}
+	
+	\ReferencesItem{Dr. Cihan Okay}{\href{mailto:cihan.okay@bilkent.edu.tr}{cihan.okay@bilkent.edu.tr}}{Professor, Department of Mathematics, Bilkent University}{Ankara, Turkey}
+	
+	\ReferencesItem{Dr. Alvin Simms}{\href{mailto:asimms@mun.ca}{asimms@mun.ca}}{Professor, Department of Geography, Memorial University}{St.~John's, Canada}
+\end{itemize}
+
+\end{document}
