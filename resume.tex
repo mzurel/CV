@@ -1,5 +1,8 @@
 \documentclass[letterpaper,11pt]{article}
 
+\usepackage{ifthen}
+\newcommand{\printable}{0}
+
 \usepackage[empty]{fullpage}
 \usepackage[lmargin=0.5in,rmargin=0.5in,tmargin=0.5in,]{geometry}
 \raggedright
@@ -111,15 +114,19 @@
 	\EducationItem{PhD (in progress)}{University of British Columbia}{Physics (Quantum information and computation)}{September, 2020 -- Present}
 	\begin{itemize}
 		\vspace{-4pt}
-		\EducationSubItem{Supervisor: Dr. Robert Raussendorf}{}
+		\EducationSubItem{Supervisor: Dr.~Robert Raussendorf}{}
 		\EducationSubItem{Expected graduation: 2025}{}
 	\end{itemize}
 	
-	\EducationItem{MSc}{University of British Columbia}{Physics (Quantum information and computation)}{September, 2019 -- November, 2020}
+	\EducationItem{MSc}{University of British Columbia}{Physics (Quantum information and computation)}{September, 2019 -- October, 2020}
 	\begin{itemize}
 		\vspace{-4pt}
-		\EducationSubItem{Supervisor: Dr. Robert Raussendorf}{}
-		\EducationSubItem{Thesis: \href{https://dx.doi.org/10.14288/1.0394790}{Hidden variable models and classical simulation algorithms for quantum computation with magic states on qubits}}{}
+		\EducationSubItem{Supervisor: Dr.~Robert Raussendorf}{}
+		\ifthenelse{\printable = 0}{
+			\EducationSubItem{Thesis: \href{https://dx.doi.org/10.14288/1.0394790}{Hidden variable models and classical simulation algorithms for quantum computation with magic states on qubits}}{}
+		}{
+			\EducationSubItem{Thesis: Hidden variable models and classical simulation algorithms for quantum computation with magic states on qubits (\href{https://dx.doi.org/10.14288/1.0394790}{https://dx.doi.org/10.14288/1.0394790}}{}	
+		}
 	\end{itemize}
 	
 	\EducationItem{BSc}{University of British Columbia}{Combined honours in Physics and Mathematics}{September, 2014 -- May, 2019}
@@ -140,7 +147,11 @@
 	\ExperienceItem{Research assistant}{Vancouver, Canada}{Department of Physics, University of British Columbia}{September, 2018 -- Present}
 	\begin{itemize}
 		\vspace{-4pt}
-		\ExperienceSubItem{For list of publications see \href{https://scholar.google.com/citations?user=qUA_szUAAAAJ&hl=en&oi=ao}{Google Scholar}}{}
+		\ifthenelse{\printable = 0}{
+			\ExperienceSubItem{For list of publications see \href{https://scholar.google.com/citations?user=qUA_szUAAAAJ&hl=en&oi=ao}{Google Scholar}}{}
+		}{
+			\ExperienceSubItem{For list of publications see Google Scholar: \href{https://scholar.google.com/citations?user=qUA_szUAAAAJ&hl=en&oi=ao}{https://scholar.google.com/citations?user=qUA\_szUAAAAJ\&hl=en\&oi=ao}}{}
+		}
 	\end{itemize}
 	
 	\ExperienceItem{Teaching assistant}{Vancouver, Canada}{Department of Physics, University of British Columbia}{September, 2019 -- Present}
