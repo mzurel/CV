@@ -15,7 +15,7 @@ allbordercolors={0.8 0.8 0.8}]{hyperref}
 
 \usepackage{amsmath,amsfonts,amssymb,physics}
 
-\usepackage[backend=biber,citestyle=numeric-comp,bibstyle=numeric,sorting=none,sortcites=true,maxnames=5,minnames=4]{biblatex}
+\usepackage[maxnames=5,backend=biber,citestyle=numeric-comp,bibstyle=numeric,sorting=none,sortcites=true]{biblatex}
 \addbibresource{biblio.bib}
 
 % Format section headings
@@ -27,15 +27,6 @@ allbordercolors={0.8 0.8 0.8}]{hyperref}
 % Tabular formatting
 \usepackage{enumitem}
 \renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\PersonalInfoItem}[2]{
-	\item{\vspace{-1pt}
-		\begin{tabular*}{0.92\textwidth}{l@{\extracolsep{\fill}}r}
-			{#1} & {#2}
-		\end{tabular*}
-		\vspace{-5pt}
-	}
-}
 
 \newcommand{\EducationItem}[4]{
 	\item{\vspace{-1pt}
@@ -55,14 +46,15 @@ allbordercolors={0.8 0.8 0.8}]{hyperref}
 	}
 }
 
-\newcommand{\ConferenceItem}[4]{
-	\item{\vspace{-1pt}
-		\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-			{#1} & {#2}\\
-			{#3} & {#4}
-		\end{tabular*}
-		\vspace{-5pt}
-	}
+% Conference item data
+% 1: Conference name
+% 2: Format
+% 3: Title
+\newcommand{\ConferenceItem}[3]{
+	\item{\parbox{0.97\textwidth}{
+		{#1}  \hfill {#2}\\
+		\emph{#3}
+	}}
 }
 
 \newcommand{\TeachingItem}[2]{
@@ -85,99 +77,123 @@ allbordercolors={0.8 0.8 0.8}]{hyperref}
 
 \begin{document}
 
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
-	{\Huge \textbf{Michael Zurel}}% & \begin{tabular}{l}
-		%Personal email: \href{mailto:mzurel@protonmail.com}{mzurel@protonmail.com}\\
-		%Work email: \href{mailto:mzurel@phas.ubc.ca}{mzurel@phas.ubc.ca}\\
-		%Website: \href{https://mzurel.github.io}{mzurel.github.io}
-		%Google Scholar : \href{https://scholar.google.com/citations?user=qUA_szUAAAAJ&hl=en&oi=ao}{Google scholar}
-	%\end{tabular}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+	\parbox{0.5\textwidth}{
+		{\Huge \textbf{Michael Zurel}}
+	}
+	&
+	\begin{tabular}{l}
+		Personal email: \href{mailto:mzurel@protonmail.com}{mzurel@protonmail.com}\\
+		UBC email: \href{mailto:mzurel@phas.ubc.ca}{mzurel@phas.ubc.ca}\\
+		Website: \href{https://mzurel.github.io}{mzurel.github.io}\\
+		%Github: \href{https://github.com/mzurel}{github.com/mzurel}
+	\end{tabular}
 \end{tabular*}
 
-\section*{Personal information}
-PhD student @ University of British Columbia (Physics) \& Stewart Blusson Quantum Matter Institute
-\begin{itemize}[leftmargin=*]
-	\PersonalInfoItem{Personal email: \href{mailto:mzurel@protonmail.com}{mzurel@protonmail.com}}{}
-	\PersonalInfoItem{UBC email: \href{mailto:mzurel@phas.ubc.ca}{mzurel@phas.ubc.ca}}{}
-	\PersonalInfoItem{Website: \href{https://mzurel.github.io}{mzurel.github.io}}{}
-	\PersonalInfoItem{Github: \href{https://github.com/mzurel}{github.com/mzurel}}{}
-\end{itemize}
 
 \section*{Education}
 \begin{itemize}[leftmargin=*]
 	\EducationItem{PhD (in progress)}{University of British Columbia}{Physics (Quantum information and computation)}{September, 2020 -- Present}
 	\begin{itemize}
-		\vspace{-3pt}
-		\EducationSubItem{Supervisor: Dr. Robert Raussendorf}{}
-		\EducationSubItem{Expected graduation: 2025}{}
+		\vspace{-4pt}
+		\EducationSubItem{Supervisor: Dr.~Robert Raussendorf}{}
+		\EducationSubItem{Affiliations: University of British Columbia (Physics) \& Stewart Blusson Quantum Matter Institute}{}
+		\EducationSubItem{Expected completion: 2024}{}
 	\end{itemize}
 	
 	\EducationItem{MSc}{University of British Columbia}{Physics (Quantum information and computation)}{September, 2019 -- November, 2020}
 	\begin{itemize}
-		\vspace{-3pt}
-		\EducationSubItem{Supervisor: Dr. Robert Raussendorf}{}
+		\vspace{-4pt}
+		\EducationSubItem{Supervisor: Dr.~Robert Raussendorf}{}
 		\EducationSubItem{Thesis: \href{https://dx.doi.org/10.14288/1.0394790}{Hidden variable models and classical simulation algorithms for quantum computation with magic states on qubits}}{}
 	\end{itemize}
 	
 	\EducationItem{BSc}{University of British Columbia}{Combined honours in Physics and Mathematics}{September, 2014 -- May, 2019}
 	\begin{itemize}
-		\vspace{-3pt}
+		\vspace{-4pt}
 		\EducationSubItem{Honours thesis: Contextuality and Simulating Quantum Computation with Magic States}{}
 	\end{itemize}
+	%\EducationItem{Memorial University}{St. John’s, Newfoundland}{Completed two physics courses during final year of high school}{2013-2014}
+	%\EducationItem{International Summer School for Young Physicists}{Waterloo, Ontario}{Two week summer program hosted by the Perimeter Institute for Theoretical Physics}{2014}
+	%\EducationItem{Gonzaga High School}{St. John’s, Newfoundland}{Graduated with First Class Honours, French Immersion Designation}{2012-2014}
 \end{itemize}
+
 
 % Publications section
 \nocite{ZurelHeimendahl2022,RaussendorfFeldmann2022,OkayRaussendorf2021,Zurel2020,ZurelRaussendorf2020,RaussendorfZurel2020}
 \printbibliography[title={Publications \& preprints}]
-For full list see \href{https://scholar.google.com/citations?user=qUA_szUAAAAJ&hl=en&oi=ao}{Google Scholar}.
+For PDFs see \href{mzurel.github.io}{mzurel.github.io}; for citation data see \href{https://scholar.google.com/citations?user=qUA_szUAAAAJ&hl=en&oi=ao}{Google Scholar}.
 
-% Conference section
-\section*{Conference presentations and posters}
+
+\section*{Software}
 \begin{itemize}[leftmargin=*]
-	\ConferenceItem{Theory of Quantum Computation, Communication, and Cryptography}{University of Illinois, Urbana-Champaign, Illinois}{}{August, 2022}
-	\begin{itemize}
-		\item Title: 
-		\item Pdf: 
-	\end{itemize}
+	\item \href{https://github.com/mzurel/RandomQM.jl}{RandomQM.jl} --- Julia functions for generating random quantum states and random quantum channels
+	\vspace{-4pt}
+	\item \href{https://github.com/mzurel/RandomStabilizers.jl}{RandomStabilizers.jl} --- Julia code for generating random stabilizer states and random symplectic group elements based on the ``SYMPLECTICImproved'' algorithm of J.~Math.~Phys.~\textbf{55}~122202~(2014).
+	\vspace{-4pt}
+	\item BinarySymplectic.jl --- Tools for working with symplectic vector spaces and symplectic groups over $\mathbb{Z}_2$.
+	\vspace{-4pt}
+	\item FiniteSymplectic.jl --- Tools for working with symplectic modules and symplectic groups over $\mathbb{Z}_d$.
+	\item NetworkViz --- Data visualization web app for input-output data, census data, and other socio-economic data in Newfoundland and Labrador.
+\end{itemize}
+Code available on GitHub: \href{https://github.com/mzurel}{github.com/mzurel}
+
+%% Conference section
+\section*{Conference talks, seminars, and posters}
+\begin{itemize}[leftmargin=*]
+	\ConferenceItem{Theory of Quantum Computation, Communication, and Cryptography (TQC), July 2022}{25 minute talk}{Hidden Variable Model for Quantum Computation with Magic States on Any Number of Qudits of Any Dimension}
 	
-	\ConferenceItem{Quantum Physics and Logic (QPL) 2022}{Oxford University, Oxford, UK}{}{June, 2022}
-	\begin{itemize}
-		\item Title: 
-		\item Slides:
-	\end{itemize}
+	\ConferenceItem{Theory of Quantum Computation, Communication, and Cryptography (TQC), July 2022}{Poster}{The role of cohomology in quantum computation with magic states}
 	
-	\ConferenceItem{Quantum Information Processing (QIP)}{Caltech, Pasadena, California}{Poster}{March, 2022}
-	\begin{itemize}
-		\item Title: 
-		\item Poster pdf: 
-	\end{itemize}
-	\ConferenceItem{Theory of Quantum Computation, Communication, and Cryptography (TQC)}{U of Latvia, Riga, Latvia}{30 minute talk}{July, 2021}
-	\begin{itemize}
-		\if{#printable}
-			\item 
-		\else
-		
-		\item \href{https://youtu.be/b1wYoOOLZCI}{[Video]}
-	\end{itemize}
-	\ConferenceItem{Quantum Physics and Logic (QPL)}{Gdansk, Poland (online)}{30 minute talk}{June, 2021}
-	\begin{itemize}
-		\item Video: \href{https://youtu.be/ZJwLBAiV_Zc}{https://youtu.be/ZJwLBAiV\_Zc}
-		\item Slides: \href{}{}
-	\end{itemize}
-	\ConferenceItem{Quantum Information Processing (QIP)}{, Munich, Germany}{Poster}{March, 2021}
-	\ConferenceItem{Algebraic Structures in Quantum Computation (ASQC4)}{U of British Columbia, Vancouver, Canada}{1 hour talk}{June, 2020}
-	\begin{itemize}
-		\item Video: \href{https://youtu.be/Oo6HHSiiJzo}{https://youtu.be/Oo6HHSiiJzo}
-		\item Slides: \href{}{}
-	\end{itemize}
-	\ConferenceItem{Southwest Quantum Information and Technology (SQuInT) 2020}{U of Oregon, Eugene, Oregon}{Poster}{February, 2020}
-	\begin{itemize}
-		\item Poster pdf: \href{}{}
-	\end{itemize}
-	\ConferenceItem{Quantum Physics and Logic (QPL) 2019}{Chapman University, Orange, California}{25 minute talk}{June, 2019}
-	\begin{itemize}
-		\item Slides: \href{}{}
-	\end{itemize}
+	\ConferenceItem{Quantum Physics and Logic (QPL), June 2022}{10 minute talk}{Hidden Variable Model for Quantum Computation with Magic States on Any Number of Qudits of Any Dimension}
+	
+	\ConferenceItem{Bilkent University Math Grad Seminar, June 2022}{60 minute talk}{Polytopes in quantum computation and quantum information}
+	
+	\ConferenceItem{Algebraic Structures in Quantum Computation V (ASQC5), June 2022}{45 minute talk}{Hidden variable models for quantum computation with magic states}
+	
+	\ConferenceItem{UBC Institute of Applied Mathematics Grad Seminar, June 2022}{60 minute talk}{Polytopes in quantum computation and quantum information}
+	
+	\ConferenceItem{Internal talk for QuEra Computing Inc. software/algorithms team, April 2022}{45 minute talk}{Classical simulation of quantum computation with magic states}
+	
+	\ConferenceItem{Quantum Information Processing (QIP), March 2022}{Poster}{Hidden Variable Model for Quantum Computation with Magic States on Any Number of Qudits of Any Dimension}
+	
+	\ConferenceItem{Theory of Quantum Computation, Communication, and Cryptography (TQC), July 2021}{30 minute talk}{Hidden variable model for universal quantum computation with magic states on qubits}
+	
+	\ConferenceItem{Quantum Physics and Logic (QPL), June, 2021}{30 minute talk}{Hidden variable model for universal quantum computation with magic states on qubits}
+	
+	\ConferenceItem{Quantum Information Processing (QIP), March, 2021}{Poster}{Hidden variable model for universal quantum computation with magic states on qubits}
+	
+	\ConferenceItem{Algebraic Structures in Quantum Computation IV (ASQC4), June, 2020}{60 minute talk}{Hidden variable model for universal quantum computation with magic states on qubits}
+	
+	\ConferenceItem{Southwest Quantum Information and Technology (SQuInT), February 2020}{Poster}{Phase-space-simulation method for quantum computation with magic states on qubits}
+	
+	\ConferenceItem{Quantum Physics and Logic (QPL), June 2019}{25 minute talk}{Phase-space-simulation method for quantum computation with magic states on qubits}
+\end{itemize}
+For slides, PDFs, videos, etc., see \href{https://mzurel.github.io/talks}{mzurel.github.io/talks}
+
+\section*{Workshop organization}
+\begin{itemize}[leftmargin=*]
+	\ConferenceItem{Algebraic Structures in Quantum Computation V (ASQC5)}{June, 2022}{University of British Columbia, Vancouver, Canada}
+\end{itemize}
+
+% Awards section
+\section*{Awards}
+\begin{itemize}[leftmargin=*]
+	\AwardsItem{Alexander Graham Bell Canada Graduate Scholarship (NSERC CGS-D)}{2021 -- 2024}
+	\AwardsItem{UBC Four Year Doctoral Fellowship (4YF)}{2021 -- 2025}
+	\AwardsItem{President's Academic Excellence Initiative PhD Award}{2020 -- 2024}
+	\AwardsItem{UBC Faculty of Science PhD Tuition Award }{2020 -- 2024}
+	%\AwardsItem{UBC Chancellor's Scholar Award}{2014}
+	%\AwardsItem{The Duke of Edinburgh's International Award Gold Award Received}{2014}
+	%\AwardsItem{CAP High School Physics Examination - $1^{st}$ Place in Newfoundland \& Labrador}{2014}
+	%\AwardsItem{Gonzaga High School Award of Excellence}{2012 -- 2014}
+	%\AwardsItem{AAA hockey provincial champion}{2012 -- 2014}
+	%\AwardsItem{Newfoundland provincial lacrosse team}{2011 -- 2013}
+\end{itemize}
+
+\section*{Peer review}
+\begin{itemize}[leftmargin=*]
+	\AwardsItem{Reviewer for PRX Quantum}{}
 \end{itemize}
 
 % Teaching section
@@ -191,28 +207,10 @@ For full list see \href{https://scholar.google.com/citations?user=qUA_szUAAAAJ&h
 	\TeachingItem{Teaching assistant: Introductory Physics}{September, 2019 -- December, 2019}
 \end{itemize}
 
-% Awards section
-\section*{Awards}
-\begin{itemize}[leftmargin=*]
-	\AwardsItem{Alexander Graham Bell Canada Graduate Scholarship (NSERC CGS-D)}{2021--2024}
-	\AwardsItem{UBC Four Year Doctoral Fellowship (4YF)}{2021 -- 2025}
-	\AwardsItem{President's Academic Excellence Initiative PhD Award}{2020 -- 2022}
-	\AwardsItem{UBC Faculty of Science PhD Tuition Award }{2020 -- 2022}
-	%\AwardsItem{UBC Chancellor's Scholar Award}{2014}
-	%\AwardsItem{The Duke of Edinburgh's International Award Gold Award Received}{2014}
-	%\AwardsItem{CAP High School Physics Examination - $1^{st}$ Place in Newfoundland \& Labrador}{2014}
-	%\AwardsItem{Gonzaga High School Award of Excellence}{2012 -- 2014}
-	%\AwardsItem{AAA hockey provincial champion}{2012 -- 2014}
-	%\AwardsItem{Newfoundland provincial lacrosse team}{2011 -- 2013}
-\end{itemize}
+\vspace{1cm}
 
-\section*{Software}
-\begin{itemize}[leftmargin=*]
-	\item RandomQM.jl --- Julia functions for generating random quantum states and quantum channels
-	\item RandomStabilizers.jl --- Julia code for generating random stabilizer states and random symplectic group elements based on the ``SYMPLECTICImproved'' algorithm of J.~Math.~Phys.~\textbf{55}~122202~(2014).
-	\item BinarySymplectic.jl --- Tools for working with symplectic vector spaces and symplectic groups over $\mathbb{Z}_2$.
-	\item FiniteSymplectic.jl --- Tools for working with symplectic modules and symplectic groups over $\mathbb{Z}_d$.
-	
-\end{itemize}
+\begin{flushright}
+	Last updated: July, 2022
+\end{flushright}
 
 \end{document}
