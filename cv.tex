@@ -75,6 +75,15 @@ allbordercolors={0.8 0.8 0.8}]{hyperref}
 	}
 }
 
+\newcommand{\SkillsItem}[2]{
+	\item{\vspace{-1pt}
+		\begin{tabular*}{0.97\textwidth}{l l}
+			{#1:} & {#2}
+		\end{tabular*}
+		\vspace{-5pt}
+	}
+}
+
 \begin{document}
 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
@@ -134,7 +143,7 @@ For PDFs see \href{mzurel.github.io}{mzurel.github.io}; for citation data see \h
 	\item BinarySymplectic.jl --- Tools for working with symplectic vector spaces and symplectic groups over $\mathbb{Z}_2$.
 	\vspace{-4pt}
 	\item FiniteSymplectic.jl --- Tools for working with symplectic modules and symplectic groups over $\mathbb{Z}_d$.
-	\item NetworkViz --- Data visualization web app for input-output data, census data, and other socio-economic data in Newfoundland and Labrador.
+	\item NetworkViz --- Data visualization web app for input-output data, census data, and other socio-economic data in Newfoundland and Labrador.  Written in R.
 \end{itemize}
 Code available on GitHub: \href{https://github.com/mzurel}{github.com/mzurel}
 
@@ -196,6 +205,14 @@ For slides, PDFs, videos, etc., see \href{https://mzurel.github.io/talks}{mzurel
 	\AwardsItem{Reviewer for PRX Quantum}{}
 \end{itemize}
 
+
+% Technical skills section
+\section*{Technical Skills}
+\begin{itemize}[leftmargin=*]
+	\SkillsItem{Programming languages}{Python, Julia, Matlab, Octave, R, SQL}
+	\SkillsItem{Technologies}{Linux, Latex, Git, AWS, MariaDB}
+\end{itemize}
+
 % Teaching section
 \section*{Teaching experience}
 \begin{itemize}[leftmargin=*]
@@ -210,7 +227,7 @@ For slides, PDFs, videos, etc., see \href{https://mzurel.github.io/talks}{mzurel
 \vspace{1cm}
 
 \begin{flushright}
-	Last updated: July, 2022
+	Last updated: August, 2022
 \end{flushright}
 
 \end{document}
