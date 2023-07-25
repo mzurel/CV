@@ -1,7 +1,7 @@
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage[empty]{fullpage}
-\usepackage[margin=1.25cm]{geometry}
+\usepackage[margin=1.5cm]{geometry}
 \raggedright
 \raggedbottom
 
@@ -57,6 +57,13 @@ allbordercolors={0.8 0.8 0.8}]{hyperref}
 	}}
 }
 
+\newcommand{\OrganizerItem}[4]{
+	\item{\parbox{0.97\textwidth}{
+			{#1} \hfill {#2}\\
+			\emph{#3} \hfill {#4}
+		}}
+}
+
 \newcommand{\TeachingItem}[2]{
 	\item{\vspace{-1pt}
 		\begin{tabular*}{0.92\textwidth}{l@{\extracolsep{\fill}}r}
@@ -105,9 +112,10 @@ allbordercolors={0.8 0.8 0.8}]{hyperref}
 	\EducationItem{PhD (in progress)}{University of British Columbia}{Physics (Quantum information and computation)}{September, 2020 -- Present}
 	\begin{itemize}
 		\vspace{-4pt}
-		\EducationSubItem{Supervisor: Dr.~Robert Raussendorf}{}
+		\EducationSubItem{Research supervisor: Dr.~Robert Raussendorf}{}
+		\EducationSubItem{Academic co-supervisor: Dr.~William G. Unruh}{}
 		\EducationSubItem{Affiliations: University of British Columbia (Physics) \& Stewart Blusson Quantum Matter Institute}{}
-		\EducationSubItem{Expected completion: 2024}{}
+		\EducationSubItem{Expected completion: May, 2024}{}
 	\end{itemize}
 	
 	\EducationItem{MSc}{University of British Columbia}{Physics (Quantum information and computation)}{September, 2019 -- November, 2020}
@@ -129,9 +137,15 @@ allbordercolors={0.8 0.8 0.8}]{hyperref}
 
 
 % Publications section
-\nocite{ZurelRaussendorf2023,RaussendorfFeldmann2022,ZurelHeimendahl2022,OkayRaussendorf2021,Zurel2020,ZurelRaussendorf2020,RaussendorfZurel2020}
+\nocite{ZurelCohenRaussendorf2023,ZurelRaussendorf2023,RaussendorfFeldmann2022,ZurelHeimendahl2022,OkayRaussendorf2021,Zurel2020,ZurelRaussendorf2020,RaussendorfZurel2020}
 \printbibliography[title={Publications \& preprints}]
 For PDFs see \href{mzurel.github.io}{mzurel.github.io}; for citation data see \href{https://scholar.google.com/citations?user=qUA_szUAAAAJ&hl=en&oi=ao}{Google Scholar}.
+
+
+\section*{Patents}
+\begin{itemize}[leftmargin=*]
+	\ConferenceItem{US Patent Application 20230206102A1}{Status: Pending}{Method of simulating a quantum computation, system for simulating a quantum computation, method for issuing a computational key, system for issuing a computational key}
+\end{itemize}
 
 
 \section*{Software}
@@ -184,7 +198,7 @@ For slides, videos, etc., see \href{https://mzurel.github.io/talks}{mzurel.githu
 
 \section*{Poster presentations}
 \begin{itemize}[leftmargin=*]
-	\ConferenceItem{Quantum Physics and Logic (QPL), July 2023}{}{Simulation of quantum computation with magic states via Jordan-Wigner transformations}
+	\ConferenceItem{Quantum Physics and Logic (QPL), July 2023}{}{Simulating quantum computation with magic states: how many ``bits'' for ``it''?}
 	
 	\ConferenceItem{Max Planck - UBC - UTokyo Centre for Quantum Materials Annual Meeting, September 2022}{}{Hidden variable model for quantum computation with magic states on qudits of any dimension}
 	
@@ -200,10 +214,12 @@ For slides, videos, etc., see \href{https://mzurel.github.io/talks}{mzurel.githu
 \end{itemize}
 For poster PDFs see \href{https://mzurel.github.io/talks}{mzurel.github.io/talks}
 
-\section*{Workshop organization}
+\section*{Workshop \& summer school organization}
 \begin{itemize}[leftmargin=*]
-	\ConferenceItem{Summer School on the Foundations of Quantum Computational Advantage}{July, 2023 (postponed to 2024)}{Bilkent University, Ankara, Turkey}
-	\ConferenceItem{Algebraic Structures in Quantum Computation V (ASQC5)}{June, 2022}{University of British Columbia, Vancouver, Canada}
+	\OrganizerItem{Summer School on the Foundations of Quantum Computational Advantage}{July, 2023 (postponed to 2024)}{Bilkent University, Ankara, Turkey}{Project mentor}
+	\OrganizerItem{Algebraic Structures in Quantum Computation V (ASQC5)}{June, 2022}{University of British Columbia, Vancouver, Canada}{Co-organizer}
+	\OrganizerItem{Cornerstone Models of Quantum Computing Summer School}{August, 2021}{TRIUMF, Vancouver, Canada}{Teaching assistant for MBQC section}
+	\OrganizerItem{Cornerstone Models of Quantum Computing Summer School}{August, 2020}{TRIUMF, Vancouver, Canada}{Teaching assistant for MBQC section}
 \end{itemize}
 
 % Awards section
@@ -223,9 +239,12 @@ For poster PDFs see \href{https://mzurel.github.io/talks}{mzurel.github.io/talks
 \end{itemize}
 
 \section*{Peer review}
+Referee for the following journals:\vspace{-2mm}
 \begin{itemize}[leftmargin=*]
-	\AwardsItem{Reviewer for PRX Quantum (x2)}{}
-	\AwardsItem{Reviewer for Physical Review A}{}
+	\AwardsItem{Physical Review Letters}{}
+	\AwardsItem{PRX Quantum}{}
+	\AwardsItem{Physical Review A}{}
+	\AwardsItem{Quantum Journal}{}
 \end{itemize}
 
 
