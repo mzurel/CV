@@ -5,6 +5,8 @@
 \raggedright
 \raggedbottom
 
+\newcommand{\printable}{0}
+
 \usepackage[x11names]{xcolor}
 \usepackage[pdftex,
 colorlinks=true,
@@ -39,6 +41,24 @@ allbordercolors={0.8 0.8 0.8}]{hyperref}
 }
 \newcommand{\EducationSubItem}[2]{
 	\item{\vspace{-1pt}
+		\begin{tabular*}{0.92\textwidth}{l@{\extracolsep{\fill}}r}
+			{\footnotesize #1} & {\footnotesize #2}
+		\end{tabular*}
+		\vspace{-5pt}
+	}
+}
+
+\newcommand{\ExperienceItem}[4]{
+	\item{\vspace{-1pt}
+		\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+			\textbf{#1} & {#2}\\
+			{#3} & {#4}
+		\end{tabular*}
+		\vspace{-5pt}
+	}
+}
+\newcommand{\ExperienceSubItem}[2]{
+	\item{\vspace{-3pt}
 		\begin{tabular*}{0.92\textwidth}{l@{\extracolsep{\fill}}r}
 			{\footnotesize #1} & {\footnotesize #2}
 		\end{tabular*}
@@ -114,7 +134,7 @@ allbordercolors={0.8 0.8 0.8}]{hyperref}
 		\vspace{-4pt}
 		\EducationSubItem{Supervisors: Dr.~Robert Raussendorf and Dr.~William G. Unruh}{}
 		\EducationSubItem{Affiliations: University of British Columbia (Physics) \& Stewart Blusson Quantum Matter Institute}{}
-		\EducationSubItem{Expected completion: May, 2024}{}
+		\EducationSubItem{Expected completion: August, 2024}{}
 	\end{itemize}
 	
 	\EducationItem{MSc}{University of British Columbia}{Physics (Quantum information and computation)}{September, 2019 -- November, 2020}
@@ -135,6 +155,26 @@ allbordercolors={0.8 0.8 0.8}]{hyperref}
 \end{itemize}
 
 
+%%%%%%%%%%%%%%
+% Experience %
+%%%%%%%%%%%%%%
+\section*{Experience}
+\begin{itemize}[leftmargin=*]
+	\ExperienceItem{Research assistant}{Vancouver, Canada}{Department of Physics \& Astronomy, University of British Columbia}{September, 2018 -- Present}
+	
+	\ExperienceItem{Teaching assistant}{Vancouver, Canada}{Department of Physics \& Astronomy, University of British Columbia}{September, 2019 -- Present}
+	
+	\ExperienceItem{Research assistant}{St.~John's, Canada}{Department of Geography, Memorial University}{May, 2017 -- August, 2018}
+	%\begin{itemize}
+	%	\vspace{-4pt}
+	%	\ExperienceSubItem{Data acquisition, database management, data analysis (primarily census and socio-economic data)}{}
+	%	\ExperienceSubItem{Creation of dynamic data visualizations}{}
+	%\end{itemize}
+	%\ExperienceItem{Litter Collection Crew}{St. John's, Canada}{City of St. John’s}{May, 2015 -- August, 2015}
+	%\ExperienceItem{Volunteer hockey coach}{St. John's, Canada}{Avalon Minor Hockey Association}{September, 2007 -- April, 2014}
+	%\ExperienceItem{President of Junior Achievement company}{St. John's, Canada}{Junior Achievement}{2012 -- 2013}
+\end{itemize}
+
 % Publications section
 \nocite{ZurelCohenRaussendorf2023,ZurelRaussendorf2023,RaussendorfFeldmann2022,ZurelHeimendahl2022,OkayRaussendorf2021,Zurel2020,ZurelRaussendorf2020,RaussendorfZurel2020}
 \printbibliography[title={Publications \& preprints}]
@@ -149,14 +189,16 @@ For PDFs see \href{mzurel.github.io}{mzurel.github.io}; for citation data see \h
 
 \section*{Software}
 \begin{itemize}[leftmargin=*]
+	\item \href{https://github.com/mzurel/BinarySymplectic.jl}{BinarySymplectic.jl} --- Tools for working with symplectic vector spaces and symplectic groups over $\mathbb{Z}_2$.
+	\vspace{-4pt}
 	\item \href{https://github.com/mzurel/RandomQM.jl}{RandomQM.jl} --- Julia functions for generating random quantum states and random quantum channels
 	\vspace{-4pt}
 	\item \href{https://github.com/mzurel/RandomStabilizers.jl}{RandomStabilizers.jl} --- Julia code for generating random stabilizer states and random symplectic group elements based on the ``SYMPLECTICImproved'' algorithm of J.~Math.~Phys.~\textbf{55}~122202~(2014).
 	\vspace{-4pt}
-	\item \href{https://github.com/mzurel/BinarySymplectic.jl}{BinarySymplectic.jl} --- Tools for working with symplectic vector spaces and symplectic groups over $\mathbb{Z}_2$.
-	\vspace{-4pt}
-	\item FiniteSymplectic.jl --- Tools for working with symplectic modules and symplectic groups over $\mathbb{Z}_d$.
+	%\vspace{-4pt}
+	%\item FiniteSymplectic.jl --- Tools for working with symplectic modules and symplectic groups over $\mathbb{Z}_d$.
 	\item NetworkViz --- Data visualization web app for input-output data, census data, and other socio-economic data in Newfoundland and Labrador.  Written in R.
+	\vspace{-4pt}
 \end{itemize}
 Code available on GitHub: \href{https://github.com/mzurel}{github.com/mzurel}
 
@@ -285,7 +327,7 @@ Referee for the following conferences:\vspace{-2mm}
 \vspace{1cm}
 
 \begin{flushright}
-	Last updated: November, 2023
+	Last updated: December, 2023
 \end{flushright}
 
 \end{document}
