@@ -70,10 +70,17 @@ allbordercolors={0.8 0.8 0.8}]{hyperref}
 % 1: Conference name
 % 2: Format
 % 3: Title
-\newcommand{\ConferenceItem}[3]{
+\newcommand{\ConferenceItemII}[3]{
 	\item{\parbox{0.97\textwidth}{
 		{#1}  \hfill {#2}\\
 		\emph{#3}
+	}}
+}
+
+\newcommand{\ConferenceItem}[4]{
+	\item{\parbox{0.97\textwidth}{
+		{#1} \hfill {#2}\\
+		\parbox{0.86\textwidth}{\emph{#3}} \hfill {#4}
 	}}
 }
 
@@ -171,9 +178,6 @@ allbordercolors={0.8 0.8 0.8}]{hyperref}
 	%	\ExperienceSubItem{Data acquisition, database management, data analysis (primarily census and socio-economic data)}{}
 	%	\ExperienceSubItem{Creation of dynamic data visualizations}{}
 	%\end{itemize}
-	%\ExperienceItem{Litter Collection Crew}{St. John's, Canada}{City of St. John’s}{May, 2015 -- August, 2015}
-	%\ExperienceItem{Volunteer hockey coach}{St. John's, Canada}{Avalon Minor Hockey Association}{September, 2007 -- April, 2014}
-	%\ExperienceItem{President of Junior Achievement company}{St. John's, Canada}{Junior Achievement}{2012 -- 2013}
 \end{itemize}
 
 % Awards section
@@ -185,29 +189,23 @@ allbordercolors={0.8 0.8 0.8}]{hyperref}
 	\AwardsItem{UBC Four Year Doctoral Fellowship (UBC 4YF)}{2021 -- 2024}
 	\AwardsItem{President's Academic Excellence Initiative PhD Award}{2020 -- 2024}
 	\AwardsItem{UBC Faculty of Science PhD Tuition Award }{2020 -- 2024}
-	%\AwardsItem{UBC Chancellor's Scholar Award}{2014}
-	%\AwardsItem{The Duke of Edinburgh's International Award Gold Award Received}{2014}
-	%\AwardsItem{CAP High School Physics Examination - $1^{st}$ Place in Newfoundland \& Labrador}{2014}
-	%\AwardsItem{Gonzaga High School Award of Excellence}{2012 -- 2014}
-	%\AwardsItem{AAA hockey provincial champion}{2012 -- 2014}
-	%\AwardsItem{Newfoundland provincial lacrosse team}{2011 -- 2013}
 \end{itemize}
 
 \section*{Successful funding}
 \begin{itemize}[leftmargin=*]
-	\OrganizerItem{PIMS Workshop grant, \$20,000}{Awarded Nov., 2024}{Workshop proposal: Mathematical Foundations of Quantum Advantage}{Unlisted co-author}
-	\OrganizerItem{NSERC Alliance Catalyst Grant, \$25,000}{Awarded Jul., 2024}{-}{Unlisted co-author}
+	\OrganizerItem{PIMS Workshop grant: Mathematical Foundations of Quantum Advantage, \$20,000}{Awarded Nov., 2024}{Joint with Nadish de Silva (SFU) and Carmen Constantin (UCL/Oxford)}{Unlisted co-author}
+	\OrganizerItem{NSERC Alliance Catalyst Grant, \$25,000}{Awarded Jul., 2024}{Joint with Nadish de Silva (SFU) and Mark Howard (Galway)}{Unlisted co-author}
 \end{itemize}
 
 \section*{Patents}
 \begin{itemize}[leftmargin=*]
-	\ConferenceItem{Patent Application US20230206102A1; EP4128083A1; WO2021195783A1}{Status: Pending}{Method of simulating a quantum computation, system for simulating a quantum computation, method for issuing a computational key, system for issuing a computational key}
+	\ConferenceItemII{Patent Application US20230206102A1; EP4128083A1; WO2021195783A1}{Status: Pending}{Method of simulating a quantum computation, system for simulating a quantum computation, method for issuing a computational key, system for issuing a computational key}
 \end{itemize}
 
 % Publications section
 \nocite{ZurelRaussendorf2024,ZurelHeimendahl2024b,ZurelHeimendahl2024a,ZurelCohenRaussendorf2023,RaussendorfFeldmann2023,OkayRaussendorf2021,ZurelRaussendorf2020,RaussendorfZurel2020}
 \printbibliography[title={Publications \& preprints}]
-For PDFs see \href{mzurel.github.io}{mzurel.github.io}; for citation data see \href{https://scholar.google.com/citations?user=qUA_szUAAAAJ&hl=en&oi=ao}{Google Scholar}.
+For PDFs see \href{https://mzurel.github.io}{mzurel.github.io}; for citation statistics see \href{https://scholar.google.com/citations?user=qUA_szUAAAAJ&hl=en&oi=ao}{Google Scholar}.
 
 \section*{Software}
 \begin{itemize}[leftmargin=*]
@@ -230,90 +228,92 @@ Code available on GitHub: \href{https://github.com/mzurel}{github.com/mzurel}
 %% Conference section
 \section*{Conference talks}
 \begin{itemize}[leftmargin=*]
-	\ConferenceItem{Algebraic Structures in Quantum Computation VI (ASQC6) [Invited], Feb. 2025}{45 minute talk}{TBD}
+	\ConferenceItem{Foundations of Quantum Computational Advantage (FoQaCiA) Workshop [Invited]}{45 minute talk}{Introduction to the $\Lambda$ polytopes and their applications}{Jun., 2025}
 	
-	\ConferenceItem{Quantum Physics and Logic (QPL), Jul., 2024}{30 minute talk}{Efficient classical simulation of quantum computation beyond Wigner positivity}
+	\ConferenceItem{Algebraic Structures in Quantum Computation VI (ASQC6) [Invited]}{45 minute talk}{Introduction to the $\Lambda$ polytopes and their applications}{Feb., 2025}
 	
-	\ConferenceItem{Southwest Quantum Information and Technology (SQuInT) Workshop, Oct., 2023}{30 minute talk}{Simulating quantum computation: how many ``bits'' for ``it''?}
+	\ConferenceItem{Quantum Physics and Logic (QPL)}{30 minute talk}{Efficient classical simulation of quantum computation beyond Wigner positivity}{Jul., 2024}
 	
-	\ConferenceItem{Quantum Physics and Logic (QPL), Jul., 2023 (presented by a co-author)}{30 minute talk}{Simulation of quantum computation with magic states via Jordan-Wigner transformations}
+	\ConferenceItem{Southwest Quantum Information and Technology (SQuInT) Workshop}{30 minute talk}{Simulating quantum computation: how many ``bits'' for ``it''?}{Oct., 2023}
 	
-	\ConferenceItem{Coogee 2023 Workshop, Feb., 2023}{60 minute talk}{No-go theorems for discrete Wigner functions and alternative quasiprobability representations for quantum computation with magic states}
+	\ConferenceItem{Quantum Physics and Logic (QPL) [presented by a co-author]}{30 minute talk}{Simulation of quantum computation with magic states via Jordan-Wigner transformations}{Jul., 2023}
 	
-	\ConferenceItem{Theory of Quantum Computation, Communication, and Cryptography (TQC), Jul., 2022}{25 minute talk}{Hidden Variable Model for Quantum Computation with Magic States on Qudits of Any Dimension}
+	\ConferenceItem{Coogee Workshop 2023 [Invited]}{60 minute talk}{No-go theorems for discrete Wigner functions and alternative quasiprobability representations for quantum computation with magic states}{Feb., 2023}
 	
-	\ConferenceItem{Quantum Physics and Logic (QPL), Jun., 2022}{10 minute talk}{Hidden variable model for quantum computation with magic states on qudits of any dimension}
+	\ConferenceItem{Foundations of Quantum Computational Advantage (FoQaCiA) Workshop [Invited]}{45 minute talk}{$\Lambda$ polytopes and classical simulation of quantum computation with magic states}{Nov., 2022}
 	
-	\ConferenceItem{Algebraic Structures in Quantum Computation V (ASQC5), Jun., 2022}{45 minute talk}{Hidden variable models for quantum computation with magic states}
+	\ConferenceItem{Theory of Quantum Computation, Communication, and Cryptography (TQC)}{25 minute talk}{Hidden variable model for quantum computation with magic states on qudits of any dimension}{Jul., 2022}
 	
-	\ConferenceItem{Theory of Quantum Computation, Communication, and Cryptography (TQC), Jul., 2021}{30 minute talk}{Hidden variable model for universal quantum computation with magic states on qubits}
+	\ConferenceItem{Quantum Physics and Logic (QPL)}{10 minute talk}{Hidden variable model for quantum computation with magic states on qudits of any dimension}{Jun., 2022}
 	
-	\ConferenceItem{Quantum Physics and Logic (QPL), Jun., 2021}{30 minute talk}{Hidden variable model for universal quantum computation with magic states on qubits}
+	\ConferenceItem{Algebraic Structures in Quantum Computation V (ASQC5)}{45 minute talk}{Hidden variable models for quantum computation with magic states}{Jun., 2022}
 	
-	\ConferenceItem{Algebraic Structures in Quantum Computation IV (ASQC4), Jun., 2020}{60 minute talk}{Hidden variable model for universal quantum computation with magic states on qubits}
+	\ConferenceItem{Theory of Quantum Computation, Communication, and Cryptography (TQC)}{30 minute talk}{Hidden variable model for universal quantum computation with magic states on qubits}{Jul., 2021}
 	
-	\ConferenceItem{Quantum Physics and Logic (QPL), Jun., 2019}{25 minute talk}{Phase-space-simulation method for quantum computation with magic states on qubits}
+	\ConferenceItem{Quantum Physics and Logic (QPL)}{30 minute talk}{Hidden variable model for universal quantum computation with magic states on qubits}{Jun., 2021}
+	
+	\ConferenceItem{Algebraic Structures in Quantum Computation IV (ASQC4)}{60 minute talk}{Hidden variable model for universal quantum computation with magic states on qubits}{Jun., 2020}
+	
+	\ConferenceItem{Quantum Physics and Logic (QPL)}{25 minute talk}{Phase-space-simulation method for quantum computation with magic states on qubits}{Jun., 2019}
 \end{itemize}
 For slides, videos, etc., see \href{https://mzurel.github.io/talks}{mzurel.github.io/talks}
 
 \section*{Invited seminars}
 \begin{itemize}[leftmargin=*]
-	\ConferenceItem{David Gross group seminar @ University of Cologne, Apr., 2024}{60 minute talk}{Efficient classical simulation of quantum computation beyond Wigner positivity}
+	\ConferenceItem{David Gross group seminar @ University of Cologne}{60 minute talk}{Efficient classical simulation of quantum computation beyond Wigner positivity}{Apr., 2024}
 	
-	\ConferenceItem{Quantum information group seminar @ Leibniz University Hannover, Apr., 2024}{60 minute talk}{A hierarchy of classical simulation algorithms for quantum computation of increasing complexity}
+	\ConferenceItem{Quantum information group seminar @ Leibniz University Hannover}{60 minute talk}{A hierarchy of classical simulation algorithms for quantum computation of increasing complexity}{Apr., 2024}
 	
-	\ConferenceItem{Quantum information group seminar @ DAMTP, University of Cambridge, Apr., 2024}{60 minute talk}{A hierarchy of classical simulation algorithms for quantum computation of increasing complexity}
+	\ConferenceItem{Quantum information group seminar @ DAMTP, University of Cambridge}{60 minute talk}{A hierarchy of classical simulation algorithms for quantum computation of increasing complexity}{Apr., 2024}
 	
-	\ConferenceItem{Dan Browne group seminar @ University College London, Apr., 2024}{60 minute talk}{A hierarchy of classical simulation algorithms for quantum computation of increasing complexity}
+	\ConferenceItem{Dan Browne group seminar @ University College London}{60 minute talk}{A hierarchy of classical simulation algorithms for quantum computation of increasing complexity}{Apr., 2024}
 	
-	\ConferenceItem{QLOC Group Seminar @ Iberian Nanotechnology Laboratory, Sep., 2023}{60 minute talk}{A hierarchy of classical simulation algorithms for quantum computation}
+	\ConferenceItem{QLOC Group Seminar @ Iberian Nanotechnology Laboratory}{60 minute talk}{A hierarchy of classical simulation algorithms for quantum computation}{Sep., 2023}
 	
-	\ConferenceItem{Shealf talks (Samson Abramsky group seminar @ University of Oxford), Dec., 2022}{60 minute talk}{The role of cohomology in quantum computation with magic states}
+	\ConferenceItem{Shealf talks (Samson Abramsky group seminar @ University of Oxford)}{60 minute talk}{The role of cohomology in quantum computation with magic states}{Dec., 2022}
 	
-	\ConferenceItem{``FoQaCiA'' collaboration kick-off meeting @ INL, Portugal, Nov., 2022}{60 minute talk}{$\Lambda$ polytopes and classical simulation of quantum computation with magic states}
+	\ConferenceItem{David Gross group seminar @ University of Cologne}{60 minute talk}{Quasiprobability representations for quantum computation with magic states}{Jul., 2022}
 	
-	\ConferenceItem{David Gross group seminar @ University of Cologne, Jul., 2022}{60 minute talk}{Quasiprobability representations for quantum computation with magic states}
+	\ConferenceItem{Math Grad Seminar @ Bilkent University}{60 minute talk}{Polytopes in quantum computation and quantum information}{Jun., 2022}
 	
-	\ConferenceItem{Math Grad Seminar @ Bilkent University, Jun., 2022}{60 minute talk}{Polytopes in quantum computation and quantum information}
+	\ConferenceItem{Institute of Applied Mathematics Seminar @ University of British Columbia}{60 minute talk}{Polytopes in quantum computation and quantum information}{Jun., 2022}
 	
-	\ConferenceItem{Institute of Applied Mathematics Seminar @ University of British Columbia, Jun., 2022}{60 minute talk}{Polytopes in quantum computation and quantum information}
-	
-	\ConferenceItem{Internal talk for QuEra Computing Inc. software/algorithms team, Apr., 2022}{45 minute talk}{Classical simulation of quantum computation with magic states}
+	\ConferenceItem{Internal talk for QuEra Computing Inc. software/algorithms team}{45 minute talk}{Classical simulation of quantum computation with magic states}{Apr., 2022}
 \end{itemize}
 
 \section*{Poster presentations}
 \begin{itemize}[leftmargin=*]
-	\ConferenceItem{Helgoland 2025:~100 Years of Quantum Mechanics, Jun., 2025}{}{Hidden variable model for universal quantum computation and Wheeler's ``it from bit''}
+	\ConferenceItem{Helgoland 2025:~100 Years of Quantum Mechanics}{}{Hidden variable model for universal quantum computation and Wheeler's ``It from Bit''}{Jun., 2025}
 	
-	\ConferenceItem{Southwest Quantum Information and Technology (SQuInT) Workshop, Oct., 2024}{}{Efficient classical simulation of quantum computation beyond Wigner negativity}
+	\ConferenceItem{Southwest Quantum Information and Technology (SQuInT) Workshop}{}{Efficient classical simulation of quantum computation beyond Wigner negativity}{Oct., 2024}
 	
-	\ConferenceItem{Theory of Quantum Computation, Communication, and Cryptography (TQC), Sep., 2024}{}{Efficient classical simulation of quantum computation beyond Wigner positivity}
+	\ConferenceItem{Theory of Quantum Computation, Communication, and Cryptography (TQC)}{}{Efficient classical simulation of quantum computation beyond Wigner positivity}{Sep., 2024}
 	
-	\ConferenceItem{Quantum Information Processing (QIP), Jan., 2024}{}{Simulation of quantum computation with magic states via Jordan-Wigner transformations}
+	\ConferenceItem{Quantum Information Processing (QIP)}{}{Simulation of quantum computation with magic states via Jordan-Wigner transformations}{Jan., 2024}
 	
-	\ConferenceItem{Quantum Information Processing (QIP), Jan., 2024}{}{Simulating quantum computation: how many ``bits'' for ``it''?}
+	\ConferenceItem{Quantum Information Processing (QIP)}{}{Simulating quantum computation: how many ``bits'' for ``it''?}{Jan., 2024}
 	
-	\ConferenceItem{Southwest Quantum Information and Technology (SQuInT) Workshop, Oct., 2023}{}{Simulation of quantum computation with magic states via Jordan-Wigner transformations}
+	\ConferenceItem{Southwest Quantum Information and Technology (SQuInT) Workshop}{}{Simulation of quantum computation with magic states via Jordan-Wigner transformations}{Oct., 2023}
 	
-	\ConferenceItem{Quantum Physics and Logic (QPL), Jul., 2023}{}{Simulating quantum computation with magic states: how many ``bits'' for ``it''?}
+	\ConferenceItem{Quantum Physics and Logic (QPL)}{}{Simulating quantum computation with magic states: how many ``bits'' for ``it''?}{Jul., 2023}
 	
-	\ConferenceItem{Max Planck - UBC - UTokyo Centre for Quantum Materials Annual Meeting, Sep., 2022}{}{Hidden variable model for quantum computation with magic states on qudits of any dimension}
+	\ConferenceItem{Max Planck - UBC - UTokyo Centre for Quantum Materials Annual Meeting, }{}{Hidden variable model for quantum computation with magic states on qudits of any dimension}{Sep., 2022}
 	
-	\ConferenceItem{Max Planck - UBC - UTokyo Centre for Quantum Materials Annual Meeting, Sep., 2022}{}{The role of cohomology in quantum computation with magic states}
+	\ConferenceItem{Max Planck - UBC - UTokyo Centre for Quantum Materials Annual Meeting}{}{The role of cohomology in quantum computation with magic states}{Sep., 2022}
 	
-	\ConferenceItem{Theory of Quantum Computation, Communication, and Cryptography (TQC), Jul., 2022}{}{The role of cohomology in quantum computation with magic states}
+	\ConferenceItem{Theory of Quantum Computation, Communication, and Cryptography (TQC)}{}{The role of cohomology in quantum computation with magic states}{Jul., 2022}
 	
-	\ConferenceItem{Quantum Information Processing (QIP), Mar., 2022}{}{Hidden variable model for quantum computation with magic states on any number of qudits of any dimension}
+	\ConferenceItem{Quantum Information Processing (QIP)}{}{Hidden variable model for quantum computation with magic states on qudits of any dimension}{Mar., 2022}
 	
-	\ConferenceItem{Quantum Information Processing (QIP), Mar., 2021}{}{Hidden variable model for universal quantum computation with magic states on qubits}
+	\ConferenceItem{Quantum Information Processing (QIP)}{}{Hidden variable model for universal quantum computation with magic states on qubits}{Mar., 2021}
 	
-	\ConferenceItem{Southwest Quantum Information and Technology (SQuInT), Feb., 2020}{}{Phase-space-simulation method for quantum computation with magic states on qubits}
+	\ConferenceItem{Southwest Quantum Information and Technology (SQuInT)}{}{Phase-space-simulation method for quantum computation with magic states on qubits}{Feb., 2020}
 \end{itemize}
 For poster PDFs see \href{https://mzurel.github.io/talks}{mzurel.github.io/talks}
 
 \section*{Workshop \& summer school organization}
 \begin{itemize}[leftmargin=*]
-	\OrganizerItem{Mathematical Foundations of Quantum Advantage Workshop}{TBD}{Simon Fraser University, Vancouver, Canada}{Co-organizer}
+	\OrganizerItem{Mathematical Foundations of Quantum Advantage Workshop}{May, 2025}{Simon Fraser University, Vancouver, Canada}{Co-organizer}
 	%\OrganizerItem{Summer School on the Foundations of Quantum Computational Advantage}{July, 2023 (postponed to 2024)}{Bilkent University, Ankara, Turkey}{Project mentor}
 	\OrganizerItem{Algebraic Structures in Quantum Computation V (ASQC5)}{June, 2022}{University of British Columbia, Vancouver, Canada}{Co-organizer}
 	\OrganizerItem{Cornerstone Models of Quantum Computing Summer School}{August, 2021}{TRIUMF, Vancouver, Canada}{Teaching assistant for MBQC module}
@@ -330,10 +330,12 @@ Referee for the following journals:\vspace{-2mm}
 	\AwardsItem{Quantum Journal}{}
 	\AwardsItem{Journal of Mathematical Physics}{}
 	\AwardsItem{Journal of Physics A: Mathematical and Theoretical}{}
+	\AwardsItem{Journal of Applied and Computational Topology}{}
 \end{itemize}
-Referee for the following conferences:\vspace{-2mm}
+Subreviewer for the following conferences:\vspace{-2mm}
 \begin{itemize}[leftmargin=*]
 	\AwardsItem{Quantum Information Processing (QIP)}{}
+	\AwardsItem{Theory of Quantum Computation, Communication and Cryptography (TQC)}{}
 \end{itemize}
 
 I also serve on NSERC Review Committee 178 (Physics and Astronomy), a review committee for postdoctoral fellowships and postgraduate scholarships offered by the Natural Sciences and Engineering Research Council of Canada (NSERC).
@@ -361,7 +363,7 @@ I also serve on NSERC Review Committee 178 (Physics and Astronomy), a review com
 \vspace{1cm}
 
 \begin{flushright}
-	Last updated: December, 2024
+	Last updated: March, 2025
 \end{flushright}
 
 \end{document}
